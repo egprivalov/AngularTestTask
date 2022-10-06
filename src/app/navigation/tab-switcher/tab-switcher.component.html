@@ -1,0 +1,23 @@
+<nav>
+  <ul class="switcher text-center">
+    <li class="switcher-tab" [ngClass]="{ 'switcher-tab-active': currentActiveTab === 0 }"
+                              routerLink='/navigator' [queryParams]="{tab: 0}"
+                              style="transform: translateX(-1.5px)">
+      <a>Income</a>
+    </li>
+    <li class="switcher-tab" [ngClass]="{ 'switcher-tab-active': currentActiveTab === 1 }"
+                              routerLink='/navigator' [queryParams]="{tab: 1}">
+      <a>Investments</a>
+    </li>
+    <li class="switcher-tab" [ngClass]="{ 'switcher-tab-active': currentActiveTab === 2 }"
+                              routerLink='/navigator' [queryParams]="{tab: 2}"
+                              style="transform: translateX(1px)">
+      <a>Outcome</a>
+    </li>
+    <li class="switcher-tab" [ngClass]="{ 'switcher-tab-active': currentActiveTab === 3 }"
+                              routerLink='/navigator' [queryParams]="{tab: 3}"
+                              style="transform: translateX(2.5px)">
+      <a>Loans</a>
+    </li>
+  </ul>
+</nav>

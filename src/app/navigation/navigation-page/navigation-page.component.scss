@@ -1,0 +1,16 @@
+@import "src/app/app.component";
+.container{
+  min-width: 450px;
+  padding: 0;
+  margin-top: .5rem;
+  border: solid 2px $primary;
+  border-radius: 10px;
+  border-collapse: collapse;
+  border-top: none;
+  background: $active;
+}
+
+.goBack{
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}

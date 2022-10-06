@@ -1,0 +1,25 @@
+@import "src/app/app.component";
+.list-group{
+  padding: 1rem;
+  margin-bottom: 1rem;
+  max-height: calc(90vh - 6rem);
+  overflow-y: scroll;
+
+  &-item{
+    background-color: $active;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 22%;
+    padding-right: 23.5%;
+  }
+
+  &-header{
+    padding-left: 20%;
+    padding-right: 20%;
+    span{
+      width: 135px;
+    }
+  }
+}
+

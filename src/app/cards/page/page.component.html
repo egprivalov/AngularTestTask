@@ -1,0 +1,7 @@
+<div class="page">
+  <app-heading-card></app-heading-card>
+  <div class="cardsContainer w-90">
+    <app-simple-card *ngFor="let transactionName of transactionsNames"
+                     [title]="transactionName" ></app-simple-card>
+  </div>
+</div>

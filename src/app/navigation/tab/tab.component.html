@@ -1,0 +1,10 @@
+<ul class="list-group list-group-flush">
+  <li class="list-group-item text-center list-group-header">
+    <span><b>Name</b></span><span><b>Amount</b></span>
+  </li>
+  <li class="list-group-item text-left"
+      *ngFor="let transaction of currentTransactions">
+    <span>{{ transaction.name.first + ' ' + transaction.name.last}}</span>
+    <span>{{ transaction.amount | currency}}</span>
+  </li>
+</ul>
