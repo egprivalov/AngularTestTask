@@ -1,2 +1,24 @@
-# AngularTestTask
-Тестовое задание по Angular по тестовому заданию:  https://docs.google.com/document/d/e/2PACX-1vQYdtpeUBzZyWYpAgrbh_nR7vbPVn3uYCsGqp5RXh-57mh59TRR3nUb07_1wiZcFx8GkQS_BO2dnkAN/pub
+## AngularTestTask
+Тестовое задание по Angular:  
+https://docs.google.com/document/d/e/2PACX-1vQYdtpeUBzZyWYpAgrbh_nR7vbPVn3uYCsGqp5RXh-57mh59TRR3nUb07_1wiZcFx8GkQS_BO2dnkAN/pub
+____
+Были сделаны и пункт 2.2 и пункт 2.3 из технического задания, то есть оформлена страница Сводки и Страница навигации.  
+Каждая из страниц была оформлена в свой модуль. Также был создан сервис для обработки данных из Json.  
+В Json были внесены изменения, но основная структура была сохранена.
+____
+Был использован CSS-фреймворк Bootstrap4 и препроцессор SCSS. Использовался Angular14.  
+____
+Верстка была взята из ТЗ и доработана.
+____
+### Summary page
+Сделано на основе Bootstrap Cards. Весь routing сделан через routerlink и query params директивы. Количество переводов конкретного типа берется из injected сервиса, который при инициации пробегает по Json, подсчитывает и распределяет данные. Кнопка с заглавной карты ведет по ссылке /navigator, не передавая query параметров, остальные передают номер вкладки.
+![image](https://user-images.githubusercontent.com/44251572/194413459-48d77f6e-c307-4033-a420-03c1beff4fa1.png)
+____
+### Navigator page
+Сделано на основе list-group-flush, навигация является ссылками передающими query параметры, а список их обрабатывает по подписке. Также навигация подписана на изменения query и изменяет активную вкладку на основании параметров. Также добавлена кнопка вернуться на страницу сводки.
+отписки делаются в OnDestroy компонентов. Также используются currency Pipe для форматирования суммы перевода.  
+![image](https://user-images.githubusercontent.com/44251572/194414258-d2400d00-03f7-4ffd-b613-5fdab638b273.png)
+____
+### 404
+Также при изменении ссылки, в том числе с некорректными query параметрами, на некорректную случается переход на not-found компонент.
+![image](https://user-images.githubusercontent.com/44251572/194414723-b6d005a2-388f-40a6-9252-e826f0adf581.png)
